@@ -40,6 +40,7 @@ if ($topic = optional_param('topic', 0, PARAM_INT)) {
 // End backwards-compatible aliasing..
 
 //onetopic format is always multipage
+$course = course_get_format($course)->get_course();
 $course->realcoursedisplay = $course->coursedisplay == COURSE_DISPLAY_MULTIPAGE;
 $course->coursedisplay = COURSE_DISPLAY_MULTIPAGE;
         
