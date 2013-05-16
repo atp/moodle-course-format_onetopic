@@ -222,6 +222,9 @@ class format_onetopic_renderer extends format_section_renderer_base {
             }
             
             $showsection = true;
+            if (!$thissection->available) {
+                $showsection = false;
+            }
             if (!$thissection->visible) {
                 $showsection = false;
             }
